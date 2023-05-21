@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 
-const dbname = "jokesdb" //from mongo db or creates it in mongo db
-const username = "MarkLambson" //from mongo db,
-const password = "H1w3titX2IEK04Sb" //from mongo db
+const dbname = process.env.ATLAS_DATABASE //from mongo db or creates it in mongo db
+const username = process.env.ATLAS_USERNAME //from mongo db,
+const password = process.env.ATLAS_PASSWORD //from mongo db
 
 const uri = `mongodb+srv://${username}:${password}@marklcluster.eg2yamc.mongodb.net/${dbname}`
 
